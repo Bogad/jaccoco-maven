@@ -10,11 +10,6 @@ reported for code in the module in which the tests are located and not for
 the entire project as a whole. This means that the coverage-percent will
 be under-reported in many cases. 
 
-### Solution
-In this example class A in module-a calls class B in module-B which calls class C
-in module-c. All the tests are located in module-a. With standard configuration class A
-is the only class that will get coverage in the jacoco report. 
-
 By using report-appending in jacoco we can fix this and get coverage for all the classes
 in the whole project and not just for the classes in the module where the tests resides.
 
@@ -72,8 +67,6 @@ In our example we have two levels of submodules for module-c.
 root
  - module-a
  - module-b
- - module-c
-     - module-c1
 ```
 
 To get nested submodules to append to the report we have to override the jacoco properties
